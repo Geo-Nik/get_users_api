@@ -14,8 +14,8 @@ HEADERS = {
 def get_api_url(page):
     """
     get_api_url generates api url using API_URL_TEMPLATE and page number
-    :param page: the number of api page: int
-    :return : url: str
+    :param page: the number of API page: int
+    :return : API url: str
 
     """
     return API_URL_TEMPLATE.format(page)
@@ -24,7 +24,7 @@ def get_api_url(page):
 def get_response(page):
     """
     get_response gets get response from API
-    :param page: the number of api page: int
+    :param page: the number of API page: int
     :return : requests.get response in case no error and None in case any error
     """
     api_url = get_api_url(page)
@@ -40,7 +40,7 @@ def get_response(page):
 def get_data(page):
     """
     get_data gets data for specified page from target API
-    :param page: he number of api page: int
+    :param page: the number of API page: int
     :return : API data as a dict if response exists or None
     if response does not exists
     :example: {"page":1,"per_page":3,"total":12,"total_pages":4,
@@ -55,7 +55,7 @@ def get_data(page):
 def get_user_data(page):
     """
     get_user_data gets list of user data from the dict by USER_DATA_DICT_KEYWORD
-    :param page: he number of api page: int
+    :param page: the number of API page: int
     :return : list of user data
     :example: [{"id":1,"first_name":"George","last_name":"Bluth",
     "avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"} ... ]
